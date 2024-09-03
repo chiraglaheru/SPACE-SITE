@@ -12,14 +12,6 @@ html, body {
 }
 
 body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr;
-    gap: 20px;
-    min-height: 100vh;
-}
-
-.mainimgbg {
     background-image: url('imageshome/background-destination-desktop.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,6 +22,13 @@ body {
     width: 100%;
     height: 100vh;
     z-index: -1;
+
+}
+
+.grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar {
@@ -61,72 +60,41 @@ body {
     color: #dddddd;
 }
 
-.header {
-    grid-column: 1 / span 2;
-    margin-top: 130px;
-    margin-left: 80px;
-    color: white;
-    font-weight: 200;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.header .number {
-    color: grey;
-}
-.spin {
-    width: 500px;
-    height: 500px;
-    animation: spin 40s infinite linear;
-    grid-column: 3;
-    justify-self: center;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-.destibar {
-    grid-column: 1 / span 2; 
+.nav-continer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin-top: -100px; 
-    margin-left: 80px;
+    height:157px;
+}
+
+.nav-img {
+    height:fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+/* line 
+.line.svelte-1votbv2 {
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin-right: -2.5rem;
+    z-index: 2000;
+    background: hsl(var(--clr-red) / 0.25);
+}
+ */
+
+ .numbered-title {
+    text-transform: uppercase;
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
     color: white;
-    height: 80px;
+    letter-spacing: 4.725px;
 }
 
-
-.destibar h1 {
-    margin: 0;
-    margin-right: 20px;
-    font-size: 1rem;
-    margin-top: 200px; 
-    margin-left: -auto;
+.numbered-title h1 {
+    font-weight: 400;
 }
-
-.destibar h1:last-child {
-    margin-right: 0;
-}
-
-.destibar .nav-link {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 100;
-    font-size: 1.3rem;
-    text-decoration: underline ;
-}
-
-.destibar .nav-link:hover {
-    color: #dddddd;
-    border: 2px solid white;
-    border-radius: 3.5px;
-    transition: all 0.50s ease;
-}
-
