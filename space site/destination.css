@@ -28,7 +28,7 @@ body {
 .grid-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-evenly;
 }
 
 .navbar {
@@ -97,4 +97,34 @@ body {
 
 .numbered-title h1 {
     font-weight: 400;
+}
+
+.article {
+    color:#ffff;
+}
+
+.tabs {
+    color: #ffff;
+    width:600px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.image {
+   display: none;
+}
+
+.image.active {
+    display:block;
+}
+
+img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
 }
