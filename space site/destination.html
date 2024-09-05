@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,118 @@
     <link href="destination.css" rel="stylesheet" type="text/css">
 </head>
 </head>
+
 <body>
-    
-    <div class="mainimgbg"></div>
-<div class="navbar">
-    <h1><a href="index.html" class="nav-link">00 HOME</a></h1>
-    <h1><a href="destination.html" class="nav-link">01 DESTINATION</a></h1>
-    <h1><a href="crew.html" class="nav-link">02 CREW</a></h1>
-    <h1><a href="technology.html" class="nav-link">03 TECHNOLOGY</a></h1>
-</div>
-</div>
-<div class="header">
-    <p><span class="number">01</span> PICK YOUR DESTINATION</p>
-    <br>
-    <div class="destibar">
-        <h1><a href="index.html" class="nav-link">MOON</a></h1> 
-        <h1><a href="destination.html" class="nav-link">MARS</a></h1>
-        <h1><a href="crew.html" class="nav-link">EUROPA</a></h1>
-        <h1><a href="technology.html" class="nav-link">TITAN</a></h1>
+    <div class="nav-continer">
+        <div class="nav-img">
+            <img src="https://fm-space-tourism.davequah.com/assets/shared/logo.svg" alt="logo">
+        </div>
+        <!-- <div class="line svelte-1votbv2"></div>   -->
+        <div class="navbar">
+            <h1><a href="index.html" class="nav-link">00 HOME</a></h1>
+            <h1><a href="destination.html" class="nav-link">01 DESTINATION</a></h1>
+            <h1><a href="crew.html" class="nav-link">02 CREW</a></h1>
+            <h1><a href="technology.html" class="nav-link">03 TECHNOLOGY</a></h1>
+        </div>
     </div>
-    
-    <img src="imageshome/image-moon.png" alt="Rotating Image" class="spin">
-</div>
+
+    <div class="grid-container">
+        <div class="one">
+            <h1 class="numbered-title svelte-1gj1k5b">
+                <span aria-hidden="true">01</span>
+                Pick your destination
+            </h1>
+            <img  src="imageshome/image-moon.png" alt="Rotating Image" id="moon-img" class="spin image active imgcont">
+            <img src="imageshome/image-mars.png" alt="Rotating Image" id="mars-img" class="spin image imgcont ">
+            <img src="imageshome/image-europa.png" alt="Rotating Image" id="europa-img" class="spin image imgcont">
+            <img src="imageshome/image-titan.png" alt="Rotating Image" id="titan-img" class="spin image imgcont">
+        </div>
+        <div class="tabs">
+            <div role="tablist" aria-label="destination list" class="tab-list">
+                <button aria-selected="false" aria-controls="destination-0" role="tab" tabindex="-1" data-index="0"
+                    onclick="_showPage('Moon')"
+                    class="uppercase text-accent ff-sans-cond letter-spacing-2 svelte-xz4a5w">Moon </button>
+                <button aria-selected="false" aria-controls="destination-1" role="tab" tabindex="-1" data-index="1"
+                    onclick="_showPage('Mars')"
+                    class="uppercase text-accent ff-sans-cond letter-spacing-2 svelte-xz4a5w">Mars </button>
+                <button aria-selected="true" aria-controls="destination-2" role="tab" tabindex="0" data-index="2"
+                    onclick="_showPage('Europa')"
+                    class="uppercase text-accent ff-sans-cond letter-spacing-2 svelte-xz4a5w">Europa </button>
+                <button aria-selected="false" aria-controls="destination-3" role="tab" tabindex="-1" data-index="3"
+                    onclick="_showPage('Titan')"
+                    class="uppercase text-accent ff-sans-cond letter-spacing-2 svelte-xz4a5w">Titan </button>
+            </div>
+            <article id="Moon" role="tabpanel" tabindex="0" data-visible="true" class="page active">
+                <h2 class="uppercase ff-serif fs-800">Moon</h2>
+                <p class="text-accent">See our planet as you’ve never seen it before. A perfect relaxing trip away to
+                    help regain perspective and come back refreshed. While you’re there, take in some history by
+                    visiting the Luna 2 and Apollo 11 landing sites.</p>
+                <div class="destination-meta flex svelte-1gj1k5b">
+                    <div>
+                        <h3 class="uppercase text-accent fs-200">Avg. distance</h3>
+                        <p class="uppercase ff-serif svelte-1gj1k5b">384,400 km</p>
+                    </div>
+                    <div>
+                        <h3 class="uppercase text-accent fs-200">Est. travel time</h3>
+                        <p class="uppercase ff-serif svelte-1gj1k5b">3 days</p>
+                    </div>
+                </div>
+            </article>
+            <article id="Mars" role="tabpanel" tabindex="-1" data-visible="false" class="page">
+                <h2 class="uppercase ff-serif fs-800">Mars</h2>
+                <p class="text-accent">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
+                    the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!
+                </p>
+                <div class="destination-meta flex svelte-1gj1k5b">
+                    <div>
+                        <h3 class="uppercase text-accent fs-200">Avg. distance</h3>
+                        <p class="uppercase ff-serif svelte-1gj1k5b">225 mil. km</p>
+                    </div>
+                    <div>
+                        <h3 class="uppercase text-accent fs-200">Est. travel time</h3>
+                        <p class="uppercase ff-serif svelte-1gj1k5b">9 months</p>
+                    </div>
+                </div>
+            </article>
+            <article id="Europa" role="tabpanel" tabindex="-1" data-visible="false" class="page ">
+                <h2 class="uppercase ff-serif fs-800">Europa</h2>
+                <p class="text-accent">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter
+                    lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or
+                    simple relaxation in your snug wintery cabin.</p>
+                <div class="destination-meta flex svelte-1gj1k5b">
+                    <div>
+                        <h3 class="uppercase text-accent fs-200">Avg. distance</h3>
+                        <p class="uppercase ff-serif svelte-1gj1k5b">628 mil. km</p>
+                    </div>
+                    <div>
+                        <h3 class="uppercase text-accent fs-200">Est. travel time</h3>
+                        <p class="uppercase ff-serif svelte-1gj1k5b">3 years</p>
+                    </div>
+                </div>
+            </article>
+            <article id="Titan" role="tabpanel" tabindex="-1" data-visible="false"
+                class="page">
+                <h2 class="uppercase ff-serif fs-800">Titan</h2>
+                <p class="text-accent">The only moon known to have a dense atmosphere other than Earth, Titan is a home
+                    away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings
+                    of Saturn.</p>
+                <div class="destination-meta flex svelte-1gj1k5b">
+                    <div>
+                        <h3 class="uppercase text-accent fs-200">Avg. distance</h3>
+                        <p class="uppercase ff-serif svelte-1gj1k5b">1.6 bil. km</p>
+                    </div>
+                    <div>
+                        <h3 class="uppercase text-accent fs-200">Est. travel time</h3>
+                        <p class="uppercase ff-serif svelte-1gj1k5b">7 years</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
 
 </body>
+<script src="destination.js">
+
+</script>
+
 </html>
